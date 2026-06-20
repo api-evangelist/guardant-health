@@ -1,0 +1,53 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Guardant Health
+providerId: guardant-health
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Healthcare
+- Precision Oncology
+- Liquid Biopsy
+- Genomics
+- EMR Integration
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  Guardant Health publishes no public, self-serve developer API and therefore no
+  public rate-limit documentation. Ordering and results integration is delivered
+  through institutional EMR interfaces (Epic Aura, Flatiron OncoEMR) whose
+  throughput and quotas are governed by partner integration agreements and the
+  host EMR, not by a public API gateway. No rate-limit values can be reconciled
+  from public sources.
+notes: >-
+  Reconciled false: no public rate-limit values exist. Any throttling, batching
+  or volume constraints are defined per institutional partner during EMR
+  onboarding. Update this artifact only if Guardant Health publishes public API
+  rate limits.
+sources:
+- https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
+- https://guardanthealth.com/precision-oncology/for-institutional-partners/
+responseCodes:
+  throttled: 429
+limits:
+- name: API Rate Limits
+  scope: account
+  metric: requests
+  limit: not publicly documented
+  notes: No public self-serve API; limits, if any, are partner/EMR-governed.
+- name: Order Throughput
+  scope: account
+  metric: orders
+  limit: not publicly documented
+  notes: EMR ordering throughput governed by partner integration and host EMR.
+policies:
+- name: Partner-Governed Limits
+  description: Any throughput or quota constraints are negotiated per institutional partner during EMR integration onboarding.
+- name: Backoff Strategy
+  description: For any integration interface, clients should implement exponential backoff with jitter and honor Retry-After where applicable.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

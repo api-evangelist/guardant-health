@@ -1,0 +1,90 @@
+{
+  "info": {
+    "name": "Guardant Health EMR Integration (Illustrative Model)",
+    "description": "Illustrative, unofficial Postman collection modeling Guardant Health's EMR-integrated ordering and results-delivery capability. Guardant Health does NOT publish a public, self-serve developer API or an official OpenAPI specification. Ordering and results integration is provisioned per institutional partner through Epic Aura and Flatiron OncoEMR. The requests below are a representative model of documented capabilities and are NOT confirmed public endpoints; there is no public base URL.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://example.invalid/guardant-health/emr",
+      "description": "Placeholder only. No public base URL is documented; endpoints are provisioned per institutional partner."
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "tokenName",
+        "value": "Partner-provisioned token (placeholder)",
+        "type": "string"
+      }
+    ]
+  },
+  "item": [
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Place a Guardant assay order",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/orders",
+              "host": ["{{baseUrl}}"],
+              "path": ["orders"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assay\": \"Guardant360 CDx\",\n  \"patientReference\": \"emr-patient-123\",\n  \"orderingProvider\": \"provider-456\",\n  \"specimenType\": \"blood\"\n}"
+            },
+            "description": "Illustrative electronic ordering of a Guardant assay from an integrated EMR. Not a confirmed public endpoint."
+          },
+          "response": []
+        },
+        {
+          "name": "Retrieve order status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/orders/:orderId",
+              "host": ["{{baseUrl}}"],
+              "path": ["orders", ":orderId"],
+              "variable": [
+                { "key": "orderId", "value": "order-123" }
+              ]
+            },
+            "description": "Illustrative retrieval of order status. Not a confirmed public endpoint."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Results",
+      "item": [
+        {
+          "name": "Retrieve results for an order",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/orders/:orderId/results",
+              "host": ["{{baseUrl}}"],
+              "path": ["orders", ":orderId", "results"],
+              "variable": [
+                { "key": "orderId", "value": "order-123" }
+              ]
+            },
+            "description": "Illustrative retrieval of molecular profiling results for a completed order. Not a confirmed public endpoint."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

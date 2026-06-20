@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Guardant Health EMR Integration (Illustrative Model)",
+    "version": "0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Place a Guardant assay order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://example.invalid/guardant-health/emr/orders",
+            "body": {
+              "type": "json",
+              "data": "{\n  \"assay\": \"Guardant360 CDx\",\n  \"patientReference\": \"emr-patient-123\",\n  \"orderingProvider\": \"provider-456\",\n  \"specimenType\": \"blood\"\n}"
+            }
+          },
+          "docs": "Illustrative electronic ordering of a Guardant assay from an integrated EMR. Not a confirmed public endpoint; no public base URL is documented."
+        },
+        {
+          "info": {
+            "name": "Retrieve order status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.invalid/guardant-health/emr/orders/order-123"
+          },
+          "docs": "Illustrative retrieval of order status. Not a confirmed public endpoint."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Results",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve results for an order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.invalid/guardant-health/emr/orders/order-123/results"
+          },
+          "docs": "Illustrative retrieval of molecular profiling results for a completed order. Not a confirmed public endpoint."
+        }
+      ]
+    }
+  ]
+}

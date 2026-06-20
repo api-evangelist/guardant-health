@@ -1,0 +1,69 @@
+aid: guardant-health
+name: Guardant Health
+review:
+  question: Does Guardant Health expose a documented public WebSocket or realtime streaming API?
+  answer: false
+  date: '2026-06-20'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was created. Guardant Health publishes no public
+    self-serve developer API of any kind - no REST, no SSE, and no WebSocket.
+    The integration surface is partner-gated EMR ordering/results delivery
+    (Epic Aura, Flatiron OncoEMR) plus biopharma data/software platforms. There
+    is no documented event-driven, streaming, or realtime interface to model in
+    AsyncAPI, so none was authored.
+findings:
+  summary: |
+    Guardant Health (precision oncology) does not publish a public, documented
+    developer API. There is no developer portal, no published base URL, and no
+    official OpenAPI specification. The company's external integration surface
+    consists of: (1) EMR-integrated electronic test ordering and results
+    delivery, provisioned per institutional partner through Epic Aura and
+    Flatiron OncoEMR using interface standards (HL7 v2 / FHIR) negotiated during
+    onboarding; (2) patient portals (MyGuardant, My Data) that are authenticated
+    web applications behind login; and (3) biopharma data and software platforms
+    (GuardantINFORM real-world data, GuardantConnect trial matching, Guardant
+    Galaxy AI analytics) delivered under private commercial agreements. None of
+    these expose a documented public WebSocket, SSE, or other realtime streaming
+    transport.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: not publicly documented
+      documented: false
+      note: EMR ordering/results integration is partner-provisioned, not a public REST API.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No Server-Sent Events streaming interface is documented.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in Guardant Health's public materials as of the review date.
+  endpointsConfirmedRest: []
+sources:
+  - url: https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
+    type: Documentation
+    note: Describes EMR-integrated ordering and results delivery (Epic Aura, Flatiron OncoEMR); no public API, base URL, or streaming interface.
+  - url: https://guardanthealth.com/precision-oncology/for-institutional-partners/
+    type: Documentation
+    note: Institutional partnerships (Guardant Nexus); access is partner-gated, contact Key Accounts.
+  - url: https://guardanthealth.com/precision-oncology/biopharma-solutions/
+    type: Documentation
+    note: Biopharma data/software (GuardantINFORM, GuardantConnect, Guardant Galaxy); private commercial agreements, no public API.
+  - url: https://portal.guardanthealth.com/myguardant
+    type: Website
+    note: MyGuardant patient portal is an authenticated web app; no documented public patient API or streaming surface.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket, SSE, or other realtime streaming surface exists, and no public
+    REST API is documented. No AsyncAPI document was created. apis.yml models the
+    company's real partner/EMR and biopharma products with humanURLs, and a
+    clearly-labeled illustrative OpenAPI models the EMR ordering/results
+    capability without asserting confirmed public endpoints.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,154 @@
+aid: guardant-health
+url: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/apis.yml
+name: Guardant Health
+kind: company
+description: >-
+  Guardant Health is a precision oncology company whose blood- and tissue-based
+  liquid biopsy tests (Guardant360, Guardant Reveal, Guardant Shield,
+  GuardantINFINITY) detect cancer and guide treatment. Its integration surface
+  is partner- and EMR-based - electronic test ordering and results delivery
+  through Epic Aura and Flatiron OncoEMR, patient portals (MyGuardant, My Data),
+  and biopharma data platforms (GuardantINFORM, GuardantConnect, Guardant
+  Galaxy). No public self-serve developer API is documented.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- Precision Oncology
+- Liquid Biopsy
+- Genomics
+- EMR Integration
+created: '2026-06-20'
+modified: '2026-06-20'
+specificationVersion: '0.19'
+apis:
+- aid: guardant-health:guardant-health-emr-ordering-api
+  name: Guardant Health EMR Ordering Integration
+  tags:
+  - EMR Integration
+  - Test Ordering
+  - Epic
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
+  baseURL: ''
+  properties:
+  - url: https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
+    type: Documentation
+  - url: openapi/guardant-health-openapi.yml
+    type: OpenAPI
+  - url: collections/guardant-health.postman_collection.json
+    type: PostmanCollection
+  - url: collections/guardant-health.opencollection.json
+    type: OpenCollection
+  description: EMR-integrated electronic ordering of Guardant assays (Guardant360 CDx,
+    Guardant360 Response, Guardant Reveal, Guardant Shield) directly from the patient
+    chart via Epic Aura and Flatiron OncoEMR. The interface is a partner integration,
+    not a public self-serve API; no public base URL or OpenAPI is published.
+- aid: guardant-health:guardant-health-results-delivery
+  name: Guardant Health Results Delivery Integration
+  tags:
+  - EMR Integration
+  - Results
+  - HL7
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
+  baseURL: ''
+  properties:
+  - url: https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
+    type: Documentation
+  - url: openapi/guardant-health-openapi.yml
+    type: OpenAPI
+  description: Automated, EMR-based delivery of molecular profiling results back into
+    the patient chart, with support for reflex/cascade testing workflows. Delivered
+    through EMR interfaces (HL7/FHIR-style) provisioned per institutional partner;
+    no public API is documented.
+- aid: guardant-health:guardant-nexus
+  name: Guardant Nexus
+  tags:
+  - Partner Platform
+  - Provider
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://guardanthealth.com/precision-oncology/for-institutional-partners/
+  baseURL: ''
+  properties:
+  - url: https://guardanthealth.com/precision-oncology/for-institutional-partners/
+    type: Documentation
+  description: Guardant Nexus partnership program for institutional and provider partners,
+    coordinating ordering, integration and account workflows. Access is partner-gated;
+    no public API surface is documented.
+- aid: guardant-health:guardant-inform
+  name: GuardantINFORM
+  tags:
+  - Biopharma
+  - Real World Data
+  - Clinical Genomic
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://guardanthealth.com/precision-oncology/biopharma-solutions/real-world-evidence/
+  baseURL: ''
+  properties:
+  - url: https://guardanthealth.com/precision-oncology/biopharma-solutions/real-world-evidence/
+    type: Documentation
+  description: In-silico real-world clinical-genomic data platform combining de-identified
+    longitudinal clinical information with genomic data from Guardant360, used by biopharma
+    for drug development analytics. Delivered as a managed platform, not a public API.
+- aid: guardant-health:guardant-connect
+  name: GuardantConnect
+  tags:
+  - Biopharma
+  - Clinical Trials
+  - Trial Matching
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://guardanthealth.com/precision-oncology/biopharma-solutions/
+  baseURL: ''
+  properties:
+  - url: https://guardanthealth.com/precision-oncology/biopharma-solutions/
+    type: Documentation
+  description: Integrated software solution that connects patients tested with Guardant
+    assays who have actionable alterations to potentially relevant clinical studies,
+    for clinical and biopharmaceutical customers. Partner-gated; no public API.
+- aid: guardant-health:guardant-galaxy
+  name: Guardant Galaxy
+  tags:
+  - AI Analytics
+  - Biomarker Discovery
+  - Digital Pathology
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://guardanthealth.com/
+  baseURL: ''
+  properties:
+  - url: https://guardanthealth.com/
+    type: Website
+  description: Suite of advanced AI analytics and digital pathology technologies that
+    enhance Guardant test performance and power biomarker and drug discovery. Embedded
+    in Guardant's products; no public developer API is documented.
+- aid: guardant-health:myguardant-patient-portal
+  name: MyGuardant Patient Portal
+  tags:
+  - Patient Portal
+  - Results
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://portal.guardanthealth.com/myguardant
+  baseURL: ''
+  properties:
+  - url: https://portal.guardanthealth.com/myguardant
+    type: Website
+  - url: https://mydata.guardanthealth.com/
+    type: Website
+  description: Authenticated patient-facing portals (MyGuardant and My Data) where
+    patients access test status, results and personal health data. Web application
+    behind login; no documented public patient API.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/guardanthealth
+- type: Website
+  url: https://www.guardanthealth.com
+- type: Documentation
+  url: https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
+- type: Plans
+  url: plans/guardant-health-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/guardant-health-rate-limits.yml
+- type: FinOps
+  url: finops/guardant-health-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

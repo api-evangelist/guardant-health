@@ -1,0 +1,101 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Guardant Health
+providerId: guardant-health
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Healthcare
+- Precision Oncology
+- Liquid Biopsy
+- Genomics
+- EMR Integration
+- Plans
+description: >-
+  Guardant Health does not sell access to a metered public API and publishes no
+  developer pricing. Revenue is clinical (per-test reimbursement billed to
+  payers/patients for assays such as Guardant360, Guardant Reveal and Guardant
+  Shield) and partner-based (biopharma data and software agreements for
+  GuardantINFORM, GuardantConnect and Guardant Galaxy). EMR ordering and results
+  integration is provisioned to institutional partners under negotiated terms.
+  There are no Free / Developer / Enterprise API tiers to enumerate.
+notes: >-
+  Reconciled false: no public, machine-readable API pricing exists. Clinical
+  test pricing depends on payer coverage and is not a published per-call API
+  rate. Partner and biopharma pricing is negotiated privately. Update this
+  artifact only if Guardant Health publishes a public developer pricing page.
+sources:
+- https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
+- https://guardanthealth.com/precision-oncology/for-institutional-partners/
+- https://guardanthealth.com/precision-oncology/biopharma-solutions/
+plans:
+- id: guardant-health-clinical-testing
+  name: Clinical Testing (Per-Test)
+  type: usage
+  description: >-
+    Per-test clinical assays ordered through integrated EMRs and billed to
+    payers/patients via reimbursement, not via a metered API. Pricing is not
+    publicly published as an API rate.
+  entries:
+  - label: Guardant Assay (per test)
+    name: clinical_assay
+    type: usage
+    metric: tests
+    limit: -1
+    timeFrame: usage
+    geo: global
+    unit: 1
+    price: not publicly published (payer reimbursement)
+    userMultiplied: false
+  elements:
+  - name: EMR Ordering Integration
+  - name: Results Delivery Integration
+- id: guardant-health-partner
+  name: Institutional Partner Integration
+  type: enterprise
+  description: >-
+    EMR integration and ordering/results workflows provisioned to institutional
+    and provider partners (Guardant Nexus) under negotiated terms. Contact
+    Guardant Key Accounts.
+  entries:
+  - label: Partner Integration Agreement
+    name: partner_integration
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact Guardant Key Accounts
+    userMultiplied: false
+  elements:
+  - name: Epic Aura Integration
+  - name: Flatiron OncoEMR Integration
+  - name: Custom EMR Bundles
+- id: guardant-health-biopharma
+  name: Biopharma Data and Software
+  type: enterprise
+  description: >-
+    Biopharma data and software platforms (GuardantINFORM real-world data,
+    GuardantConnect trial matching, Guardant Galaxy AI analytics) licensed under
+    private commercial agreements.
+  entries:
+  - label: Biopharma Agreement
+    name: biopharma
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: GuardantINFORM
+  - name: GuardantConnect
+  - name: Guardant Galaxy
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
