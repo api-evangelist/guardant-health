@@ -1,0 +1,19 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/guardant-health-openapi.yml
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+schemes:
+- name: partnerOAuth2
+  type: oauth2
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://example.invalid/guardant-health/oauth/token
+    scopes: 0
+  description: Placeholder. Partner-provisioned authentication is negotiated during EMR onboarding;
+    no public auth flow is documented.
+  sources:
+  - openapi/guardant-health-openapi.yml

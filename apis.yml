@@ -137,6 +137,12 @@ apis:
     patients access test status, results and personal health data. Web application
     behind login; no documented public patient API.
 common:
+- type: TrustCenter
+  url: security/guardant-health-trust-center.yml
+- type: DomainSecurity
+  url: security/guardant-health-domain-security.yml
+- type: Authentication
+  url: authentication/guardant-health-authentication.yml
 - type: OAuthScopes
   url: scopes/guardant-health-scopes.yml
 - type: LinkedIn
