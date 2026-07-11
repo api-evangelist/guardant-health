@@ -137,6 +137,8 @@ apis:
     patients access test status, results and personal health data. Web application
     behind login; no documented public patient API.
 common:
+- type: OAuthScopes
+  url: scopes/guardant-health-scopes.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/guardanthealth
 - type: Website
@@ -149,6 +151,8 @@ common:
   url: rate-limits/guardant-health-rate-limits.yml
 - type: FinOps
   url: finops/guardant-health-finops.yml
+- type: Blog
+  url: https://www.guardanthealth.com/newsroom/press-releases/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

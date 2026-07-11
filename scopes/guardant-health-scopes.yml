@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/guardant-health-openapi.yml
+docs: https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
+note: Guardant Health does not publish OAuth scopes; access is partner-provisioned
+  during EMR onboarding (Epic Aura, Flatiron OncoEMR) with no public developer
+  authentication documentation (https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/).
+schemes:
+- name: partnerOAuth2
+  source: openapi/guardant-health-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://example.invalid/guardant-health/oauth/token
+  description: Placeholder. Partner-provisioned authentication is negotiated during EMR onboarding;
+    no public auth flow is documented.
+scopes: []
