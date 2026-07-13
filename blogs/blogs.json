@@ -1,0 +1,14 @@
+{
+  "repo": "guardant-health",
+  "feeds": [
+    {
+      "source": "https://www.guardanthealth.com/newsroom/press-releases/",
+      "feed_url": "https://www.guardanthealth.com/newsroom/press-releases/",
+      "title": "Guardant Health Press Releases",
+      "saved": 0,
+      "error": "parse_failed"
+    }
+  ],
+  "fetched": "2026-07-11T11:43:46Z",
+  "post_count": 3
+}
