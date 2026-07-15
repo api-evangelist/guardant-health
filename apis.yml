@@ -137,6 +137,8 @@ apis:
     patients access test status, results and personal health data. Web application
     behind login; no documented public patient API.
 common:
+- type: AgenticAccess
+  url: agentic-access/guardant-health-agentic-access.yml
 - type: TrustCenter
   url: security/guardant-health-trust-center.yml
 - type: DomainSecurity
