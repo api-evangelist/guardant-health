@@ -1,0 +1,16 @@
+{
+  "provider": "guardant-health",
+  "sources": [
+    "guardant-health-orders-api-openapi.yml",
+    "guardant-health-results-api-openapi.yml"
+  ],
+  "outputs": [
+    "guardant-health-orders-api-openapi.yml",
+    "guardant-health-results-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
