@@ -1,0 +1,240 @@
+{
+  "item": [
+    {
+      "id": "9edffc15-4f72-4bfc-9aa8-a3bc19394029",
+      "name": "Orders",
+      "description": {
+        "content": "Electronic ordering of Guardant assays from the EMR.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1f9cb492-8a0b-4134-a53a-bfc5213fb4ec",
+          "name": "Place a Guardant assay order",
+          "request": {
+            "name": "Place a Guardant assay order",
+            "description": {
+              "content": "Illustrative representation of electronic ordering of a Guardant assay (e.g., Guardant360 CDx, Guardant360 Response, Guardant Reveal, Guardant Shield) from an integrated EMR. Not a confirmed public endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assay\": \"<string>\",\n  \"patientReference\": \"<string>\",\n  \"orderingProvider\": \"<string>\",\n  \"specimenType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a6bb798f-4f46-4eac-9dfd-c58c80e9f2f0",
+              "name": "Order accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"assay\": \"<string>\",\n  \"patientReference\": \"<string>\",\n  \"orderingProvider\": \"<string>\",\n  \"specimenType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderId\": \"string\",\n  \"assay\": \"string\",\n  \"status\": \"cancelled\",\n  \"createdAt\": \"2006-09-15T00:45:41.316Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b8ea7096-5bcf-4f4d-aae3-fb749edc6604",
+          "name": "Retrieve order status",
+          "request": {
+            "name": "Retrieve order status",
+            "description": {
+              "content": "Illustrative representation of retrieving the status of a previously placed order. Not a confirmed public endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "orders",
+                ":orderId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orderId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7b6e29af-3f0b-4c47-8acf-d9226a654cbe",
+              "name": "Order",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderId\": \"string\",\n  \"assay\": \"string\",\n  \"status\": \"cancelled\",\n  \"createdAt\": \"2006-09-15T00:45:41.316Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://example.invalid/guardant-health/emr",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://example.invalid/guardant-health/oauth/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a2e220b2-45ff-48e3-81fd-c664982dec45",
+    "name": "Guardant Health EMR Integration API (Illustrative Model) Orders API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Illustrative, unofficial model of Guardant Health's EMR-integrated ordering and results-delivery interface. Guardant Health does NOT publish a public, self-serve developer API or an official OpenAPI specification. Test ordering and results delivery are provisioned per institutional partner through EMR integrations such as Epic Aura and Flatiron OncoEMR, using interface standards (HL7 v2 / FHIR) negotiated during onboarding. The paths below are a representative model of the documented capabilities (electronic test ordering, order status, results retrieval) and are NOT confirmed public endpoints. There is no documented public base URL; contact Guardant Key Accounts for partner integration.\n\nContact Support:\n Name: Guardant Health Key Accounts",
+      "type": "text/plain"
+    }
+  }
+}

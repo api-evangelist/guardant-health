@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Guardant Health EMR Integration API (Illustrative Model) Orders API",
+    "version": "0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://example.invalid/guardant-health/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Place a Guardant assay order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://example.invalid/guardant-health/emr/orders",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Illustrative representation of electronic ordering of a Guardant assay (e.g., Guardant360 CDx, Guardant360 Response, Guardant Reveal, Guardant Shield) from an integrated EMR. Not a confirmed public endpoint."
+        },
+        {
+          "info": {
+            "name": "Retrieve order status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://example.invalid/guardant-health/emr/orders/:orderId",
+            "params": [
+              {
+                "name": "orderId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Illustrative representation of retrieving the status of a previously placed order. Not a confirmed public endpoint."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

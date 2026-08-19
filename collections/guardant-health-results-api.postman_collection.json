@@ -1,0 +1,143 @@
+{
+  "item": [
+    {
+      "id": "abf077f7-d24a-4736-bc23-6e3dd7bb33d7",
+      "name": "Results",
+      "description": {
+        "content": "Molecular profiling results delivered back to the patient chart.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "22a772f8-4725-4fe4-8d36-4a307156eb12",
+          "name": "Retrieve results for an order",
+          "request": {
+            "name": "Retrieve results for an order",
+            "description": {
+              "content": "Illustrative representation of retrieving molecular profiling results for a completed order, delivered into the patient chart. Not a confirmed public endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "orders",
+                ":orderId",
+                "results"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orderId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dc6233a9-cb8d-4adc-9941-00bf65ba01be",
+              "name": "Result document",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orders",
+                    ":orderId",
+                    "results"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderId\": \"string\",\n  \"status\": \"string\",\n  \"reportUrl\": \"string\",\n  \"resultedAt\": \"1966-10-21T00:51:20.734Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://example.invalid/guardant-health/emr",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://example.invalid/guardant-health/oauth/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "11c38761-1992-4a7f-837a-0155f319ab3c",
+    "name": "Guardant Health EMR Integration API (Illustrative Model) Orders Results API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Illustrative, unofficial model of Guardant Health's EMR-integrated ordering and results-delivery interface. Guardant Health does NOT publish a public, self-serve developer API or an official OpenAPI specification. Test ordering and results delivery are provisioned per institutional partner through EMR integrations such as Epic Aura and Flatiron OncoEMR, using interface standards (HL7 v2 / FHIR) negotiated during onboarding. The paths below are a representative model of the documented capabilities (electronic test ordering, order status, results retrieval) and are NOT confirmed public endpoints. There is no documented public base URL; contact Guardant Key Accounts for partner integration.\n\nContact Support:\n Name: Guardant Health Key Accounts",
+      "type": "text/plain"
+    }
+  }
+}
