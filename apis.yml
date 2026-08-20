@@ -52,6 +52,10 @@ apis:
   name: GuardantINFORM
   tags:
   - Biopharma
+  - Real-World Data
+  - Clinical Genomic
+  tags_raw:
+  - Biopharma
   - Real World Data
   - Clinical Genomic
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -118,6 +122,8 @@ apis:
   humanURL: >-
     https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
