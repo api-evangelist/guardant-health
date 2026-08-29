@@ -1,0 +1,25 @@
+slug: guardant-health
+provider: Guardant Health
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Healthcare Providers
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Results
+  spec_file: guardant-health-results-api-openapi.yml
+  capability_id: BC-2860.60
+  capability_id_l1: BC-2860
+  capability_name: Diagnostic Results Management
+  confidence: 0.7
+  evidence: GET /orders/{orderId}/results "Retrieve results for an order"; "results delivery ... using
+    interface standards (HL7 v2 / FHIR)"
+  reason: Retrieval and delivery of diagnostic test results to the ordering system is diagnostic results
+    management; could alternatively be read as clinician results review, so moderate confidence.

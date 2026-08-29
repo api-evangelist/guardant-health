@@ -167,6 +167,9 @@ apis:
   - type: OpenCollection
     url: collections/guardant-health.opencollection.json
 common:
+- type: CapabilityMap
+  url: capabilities/guardant-health-capability-edges.yml
+  name: Guardant Health Business Capability Map
 - type: AgenticAccess
   url: agentic-access/guardant-health-agentic-access.yml
 - type: TrustCenter
