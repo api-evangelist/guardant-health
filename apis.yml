@@ -1,5 +1,7 @@
 aid: guardant-health
 url: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/apis.yml
+x-api-posture: docs-gated
+x-api-posture-basis: observed
 name: Guardant Health
 kind: company
 description: >-
