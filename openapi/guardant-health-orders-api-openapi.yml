@@ -1,7 +1,7 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Guardant Health EMR Integration API (Illustrative Model) Orders API
-  description: Illustrative, unofficial model of Guardant Health's EMR-integrated ordering and results-delivery interface. Guardant Health does NOT publish a public, self-serve developer API or an official OpenAPI specification. Test ordering and results delivery are provisioned per institutional partner through EMR integrations such as Epic Aura and Flatiron OncoEMR, using interface standards (HL7 v2 / FHIR) negotiated during onboarding. The paths below are a representative model of the documented capabilities (electronic test ordering, order status, results retrieval) and are NOT confirmed public endpoints. There is no documented public base URL; contact Guardant Key Accounts for partner integration.
+  title: Guardant Health EMR Integration API (Illustrative Model)…
+  description: Illustrative, unofficial model of Guardant Health's EMR-integrated ordering and results-delivery interface.
   termsOfService: https://guardanthealth.com/terms-of-use/
   contact:
     name: Guardant Health Key Accounts
@@ -58,23 +58,6 @@ paths:
                 $ref: '#/components/schemas/Order'
 components:
   schemas:
-    Order:
-      type: object
-      properties:
-        orderId:
-          type: string
-        assay:
-          type: string
-        status:
-          type: string
-          enum:
-          - received
-          - in_process
-          - resulted
-          - cancelled
-        createdAt:
-          type: string
-          format: date-time
     OrderRequest:
       type: object
       properties:
@@ -101,6 +84,23 @@ components:
       required:
       - assay
       - patientReference
+    Order:
+      type: object
+      properties:
+        orderId:
+          type: string
+        assay:
+          type: string
+        status:
+          type: string
+          enum:
+          - received
+          - in_process
+          - resulted
+          - cancelled
+        createdAt:
+          type: string
+          format: date-time
   securitySchemes:
     partnerOAuth2:
       type: oauth2
