@@ -44,6 +44,7 @@ tags:
 - Liquid Biopsy
 - Genomics
 - EMR Integration
+- Diagnostics
 created: '2026-06-20'
 modified: '2026-06-20'
 specificationVersion: '0.23'
@@ -102,6 +103,7 @@ apis:
     alterations to potentially relevant clinical studies, for clinical and biopharmaceutical customers.
     Partner-gated; no public API.
 - aid: guardant-health:guardant-galaxy
+  x-published: false
   name: Guardant Galaxy
   tags:
   - AI Analytics
