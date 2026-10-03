@@ -58,6 +58,23 @@ paths:
                 $ref: '#/components/schemas/Order'
 components:
   schemas:
+    Order:
+      type: object
+      properties:
+        orderId:
+          type: string
+        assay:
+          type: string
+        status:
+          type: string
+          enum:
+          - received
+          - in_process
+          - resulted
+          - cancelled
+        createdAt:
+          type: string
+          format: date-time
     OrderRequest:
       type: object
       properties:
@@ -84,23 +101,6 @@ components:
       required:
       - assay
       - patientReference
-    Order:
-      type: object
-      properties:
-        orderId:
-          type: string
-        assay:
-          type: string
-        status:
-          type: string
-          enum:
-          - received
-          - in_process
-          - resulted
-          - cancelled
-        createdAt:
-          type: string
-          format: date-time
   securitySchemes:
     partnerOAuth2:
       type: oauth2
