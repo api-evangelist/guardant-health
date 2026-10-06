@@ -46,7 +46,7 @@ tags:
 - EMR Integration
 - Diagnostics
 created: '2026-06-20'
-modified: '2026-06-20'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: guardant-health:guardant-nexus
@@ -172,6 +172,8 @@ apis:
   - type: OpenCollection
     url: collections/guardant-health.opencollection.json
 common:
+- url: https://www.guardanthealth.com/feed/
+  type: BlogRSS
 - type: CapabilityMap
   url: capabilities/guardant-health-capability-edges.yml
   name: Guardant Health Business Capability Map
