@@ -3,15 +3,20 @@
   "feeds": [
     {
       "source": "https://www.guardanthealth.com/newsroom/press-releases/",
-      "feed_url": "https://www.guardanthealth.com/newsroom/press-releases/",
-      "title": "Guardant Health Press Releases",
+      "feed_url": "https://www.guardanthealth.com/newsroom/press-releases/feed/",
+      "title": "",
       "saved": 0,
-      "error": "parse_failed",
-      "nature": "undetermined",
-      "nature_basis": null
+      "method": "discovered"
+    },
+    {
+      "source": "https://www.guardanthealth.com/feed/",
+      "feed_url": "https://www.guardanthealth.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     }
   ],
-  "fetched": "2026-10-03T12:15:37Z",
+  "fetched": "2026-10-10T13:15:00Z",
   "post_count": 3,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
