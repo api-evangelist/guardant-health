@@ -1,0 +1,110 @@
+edges:
+- partner_name: FDA premarket approval (IVD / surgical panels)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P200010
+  category: FDA PMA-approved IVD / surgical device
+  contract_reference:
+    register: openFDA device/pma (decision_date >= 2016-01-01; panels CH HE IM MI PA TX SU OR)
+    standard: FDA premarket approval (IVD / surgical panels)
+    spec_file: null
+    role: fda-pma-holder
+    registered_name: Guardant Health, Inc.
+    matched_domain: guardanthealth.com
+    matched_by: domain
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: P200010
+    certified_products:
+    - product: FDA PMA approval, Pathology panel
+      product_type: Pathology
+      review_panel: PA
+      lapsed: false
+      latest_decision: '2026-09-18'
+      devices_sample:
+      - Guardant360 CDx
+      - Guardant360® CDx
+      - Guardant360® Liquid CDx
+    signal_note: certified_products = one entry per FDA review PANEL with a PMA decision (original or supplement),
+      never per device; lapsed always false (decisions, not withdrawals)
+    identity: wikidata Q53308751 'Guardant Health' P856 http://guardanthealth.com
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+- partner_name: FDA CLIA test categorizations
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfClia/search.cfm
+  category: CLIA-categorized test system maker
+  contract_reference:
+    register: FDA CLIA test categorization database (clia_detail.zip)
+    standard: FDA CLIA categorization
+    spec_file: null
+    role: clia-categorized-test-system-maker
+    registered_name: Guardant Health, Inc.
+    matched_domain: guardanthealth.com
+    matched_by: domain
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: CR230127
+    certified_products:
+    - product: FDA CLIA categorization, high complexity
+      product_type: high
+      lapsed: false
+      latest_effective: 2024/08/06
+      test_systems_sample:
+      - Guardant Health, Inc. Guardant360 CDx
+      - Guardant Health, Inc., Shield
+    signal_note: 'certified_products = one entry per CLIA COMPLEXITY held (waived / moderate / high), never per
+      test system; the database lists categorizations, not withdrawals: lapsed false'
+    identity: wikidata Q53308751 'Guardant Health' P856 http://guardanthealth.com
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+- partner_name: AdvaMedDx (members)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.advamed.org/advameddx/members/
+  category: Diagnostics trade body member
+  contract_reference:
+    register: AdvaMedDx member list (advamed.org/advameddx/members)
+    standard: null
+    spec_file: null
+    role: advameddx-member
+    registered_name: Guardant Health, Inc.
+    matched_domain: guardanthealth.com
+    matched_by: domain
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    listed_website: https://www.guardanthealth.com
+    signal_note: 'self-filed paid membership: listing alone = standard-participant; hand-reviewed'
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+generated: '2026-10-21'
+method: searched
+source:
+- https://api.fda.gov/device/510k.json
+- https://api.fda.gov/device/pma.json
+- https://api.fda.gov/device/registrationlisting.json
+- https://www.accessdata.fda.gov/premarket/ftparea/clia_detail.zip
+- https://ec.europa.eu/tools/eudamed/api/
+- https://www.advamed.org/advameddx/members/
+checked:
+- https://api.fda.gov/device/510k.json
+- https://api.fda.gov/device/pma.json
+- https://api.fda.gov/device/registrationlisting.json
+- https://ec.europa.eu/tools/eudamed/api/
+- https://www.accessdata.fda.gov/premarket/ftparea/clia_detail.zip
+- https://www.advamed.org/advameddx/members/
