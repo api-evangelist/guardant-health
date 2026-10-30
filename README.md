@@ -1,4 +1,4 @@
-# Guardant Health (guardant-health)
+# Guardant Health
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,150 +64,131 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Guardant Health is a precision oncology company whose blood- and tissue-based liquid biopsy tests (Guardant360, Guardant Reveal, Guardant Shield, GuardantINFINITY) detect cancer and guide treatment. Its integration surface is partner- and EMR-based: electronic test ordering and results delivery through Epic Aura and Flatiron OncoEMR, patient portals (MyGuardant, My Data), and biopharma data platforms (GuardantINFORM, GuardantConnect, Guardant Galaxy). No public self-serve developer API is documented.
+Guardant Health is a precision oncology company whose blood- and tissue-based liquid biopsy tests (Guardant360, Guardant Reveal, Guardant Shield, GuardantINFINITY) detect cancer and guide treatment. Its integration surface is partner- and EMR-based - electronic test ordering and results delivery through Epic Aura and Flatiron OncoEMR, patient portals (MyGuardant, My Data), and biopharma data platforms (GuardantINFORM, GuardantConnect, Guardant Galaxy). No public self-serve developer API is documented.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/apis.yml)
+**Areas:** Healthcare · Precision Oncology · Liquid Biopsy · Genomics · EMR Integration · Diagnostics
 
-## Tags
+## Guardant Health on APIs.io
 
-- Healthcare
-- Precision Oncology
-- Liquid Biopsy
-- Genomics
-- EMR Integration
+Everything profiled for Guardant Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/guardant-health/](https://apis.io/providers/guardant-health/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (7)
 
-- **Created:** 2026-06-20
-- **Modified:** 2026-06-20
+- [Guardant Nexus](https://apis.io/apis/guardant-health/guardant-nexus/) — Guardant Nexus partnership program for institutional and provider partners, coordinating ordering, integration and account workflows. Access is…
+- [GuardantINFORM](https://apis.io/apis/guardant-health/guardant-inform/) — In-silico real-world clinical-genomic data platform combining de-identified longitudinal clinical information with genomic data from Guardant360, used by…
+- [GuardantConnect](https://apis.io/apis/guardant-health/guardant-connect/) — Integrated software solution that connects patients tested with Guardant assays who have actionable alterations to potentially relevant clinical studies,…
+- [Guardant Galaxy](https://apis.io/apis/guardant-health/guardant-galaxy/) — Suite of advanced AI analytics and digital pathology technologies that enhance Guardant test performance and power biomarker and drug discovery. Embedded in…
+- [MyGuardant Patient Portal](https://apis.io/apis/guardant-health/myguardant-patient-portal/) — Authenticated patient-facing portals (MyGuardant and My Data) where patients access test status, results and personal health data. Web application behind…
+- [Guardant Health Orders API](https://apis.io/apis/guardant-health/guardant-health-orders-api/) — Electronic ordering of Guardant assays from the EMR.
+- [Guardant Health Results API](https://apis.io/apis/guardant-health/guardant-health-results-api/) — Molecular profiling results delivered back to the patient chart.
 
-## APIs
+### Published properties
 
-### Guardant Health EMR Ordering Integration
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-EMR-integrated electronic ordering of Guardant assays (Guardant360 CDx, Guardant360 Response, Guardant Reveal, Guardant Shield) directly from the patient chart via Epic Aura and Flatiron OncoEMR. The interface is a partner integration, not a public self-serve API; no public base URL or OpenAPI is published.
+#### Agentic access (1)
 
-- **Human URL:** [https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/](https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Guardant Health Agentic Access](https://apis.io/agentic-access/guardant-health/guardant-health-agentic-access/)
 
-- EMR Integration
-- Test Ordering
-- Epic
+#### Collections (3)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/)
-- [OpenAPI](openapi/guardant-health-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/guardant-health.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/guardant-health.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Guardant Health EMR Integration (Illustrative Model)](https://apis.io/collections/guardant-health/open-guardant-health/)
+- [Guardant Health EMR Integration API (Illustrative Model) Orders API](https://apis.io/collections/guardant-health/open-guardant-health-orders-api/)
+- [Guardant Health EMR Integration API (Illustrative Model) Orders Results API](https://apis.io/collections/guardant-health/open-guardant-health-results-api/)
 
-### Guardant Health Results Delivery Integration
+#### Security (3)
 
-Automated, EMR-based delivery of molecular profiling results back into the patient chart, with support for reflex/cascade testing workflows. Delivered through EMR interfaces (HL7/FHIR-style) provisioned per institutional partner; no public API is documented.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/](https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/)
+- [Guardant Health Authentication](https://apis.io/security/guardant-health/guardant-health-authentication/)
+- [Guardant Health Domain Security](https://apis.io/security/guardant-health/guardant-health-domain-security/)
+- [Guardant Health Trust Center](https://apis.io/security/guardant-health/guardant-health-trust-center/)
 
-#### Tags
+#### OAuth scopes (1)
 
-- EMR Integration
-- Results
-- HL7
+The permissions the API asks for.
 
-#### Properties
+- [Guardant Health Scopes](https://apis.io/scopes/guardant-health/guardant-health-scopes/)
 
-- [Documentation](https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/)
-- [OpenAPI](openapi/guardant-health-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+#### Plans and pricing (1)
 
-### Guardant Nexus
+Published plans, tiers and prices.
 
-Guardant Nexus partnership program for institutional and provider partners, coordinating ordering, integration and account workflows. Access is partner-gated; no public API surface is documented.
+- [Guardant Health Plans Pricing](https://apis.io/plans/guardant-health/guardant-health-plans-pricing/)
 
-- **Human URL:** [https://guardanthealth.com/precision-oncology/for-institutional-partners/](https://guardanthealth.com/precision-oncology/for-institutional-partners/)
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Partner Platform
-- Provider
+- [Guardant Health Rate Limits](https://apis.io/rate-limits/guardant-health/guardant-health-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://guardanthealth.com/precision-oncology/for-institutional-partners/)
+What the API costs to run, by operation.
 
-### GuardantINFORM
+- [Guardant Health Finops](https://apis.io/finops/guardant-health/guardant-health-finops/)
 
-In-silico real-world clinical-genomic data platform combining de-identified longitudinal clinical information with genomic data from Guardant360, used by biopharma for drug development analytics. Delivered as a managed platform, not a public API.
+## Where to find this API
 
-- **Human URL:** [https://guardanthealth.com/precision-oncology/biopharma-solutions/real-world-evidence/](https://guardanthealth.com/precision-oncology/biopharma-solutions/real-world-evidence/)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- Biopharma
-- Real World Data
-- Clinical Genomic
-
-#### Properties
-
-- [Documentation](https://guardanthealth.com/precision-oncology/biopharma-solutions/real-world-evidence/)
-
-### GuardantConnect
-
-Integrated software solution that connects patients tested with Guardant assays who have actionable alterations to potentially relevant clinical studies, for clinical and biopharmaceutical customers. Partner-gated; no public API.
-
-- **Human URL:** [https://guardanthealth.com/precision-oncology/biopharma-solutions/](https://guardanthealth.com/precision-oncology/biopharma-solutions/)
-
-#### Tags
-
-- Biopharma
-- Clinical Trials
-- Trial Matching
-
-#### Properties
-
-- [Documentation](https://guardanthealth.com/precision-oncology/biopharma-solutions/)
-
-### Guardant Galaxy
-
-Suite of advanced AI analytics and digital pathology technologies that enhance Guardant test performance and power biomarker and drug discovery. Embedded in Guardant's products; no public developer API is documented.
-
-- **Human URL:** [https://guardanthealth.com/](https://guardanthealth.com/)
-
-#### Tags
-
-- AI Analytics
-- Biomarker Discovery
-- Digital Pathology
-
-#### Properties
-
-- [Website](https://guardanthealth.com/)
-
-### MyGuardant Patient Portal
-
-Authenticated patient-facing portals (MyGuardant and My Data) where patients access test status, results and personal health data. Web application behind login; no documented public patient API.
-
-- **Human URL:** [https://portal.guardanthealth.com/myguardant](https://portal.guardanthealth.com/myguardant)
-
-#### Tags
-
-- Patient Portal
-- Results
-
-#### Properties
-
-- [Website](https://portal.guardanthealth.com/myguardant)
-- [Website](https://mydata.guardanthealth.com/)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/guardanthealth)
 - [Website](https://www.guardanthealth.com)
 - [Documentation](https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/)
-- [Plans](plans/guardant-health-plans-pricing.yml)
-- [Rate Limits](rate-limits/guardant-health-rate-limits.yml)
-- [Fin Ops](finops/guardant-health-finops.yml)
+- [Blog](https://www.guardanthealth.com/newsroom/press-releases/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 26.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 42.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 25.0 |
+| Access clarity | 15.8 |
+
+**Agent readiness 20.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 26.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/guardant-health/](https://apis.io/providers/guardant-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Guardant Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/guardant-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
